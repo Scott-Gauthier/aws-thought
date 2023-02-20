@@ -8,7 +8,7 @@ const ThoughtForm = () => {
   });
   const [characterCount, setCharacterCount] = useState(0);
   const fileInput = useRef(null);
-  
+
   // update state based on form input changes
   const handleChange = (event) => {
     if (event.target.value.length <= 280) {
@@ -92,8 +92,8 @@ const ThoughtForm = () => {
 
         <label className="form-input col-12  p-1">
           Add an image to your thought:
-          <input type="file"  className="form-input p-2" /> {/* ref="{fileInput}" */}
-          <button className="btn" onClick="{handleImageUpload}" type="submit"> {/*  */}
+          <input type="file" ref={fileInput} className="form-input p-2" /> {/*  */}
+          <button className="btn" onClick={handleImageUpload} type="submit"> {/*  */}
             Upload
           </button>
         </label>
